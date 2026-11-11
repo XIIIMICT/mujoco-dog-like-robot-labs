@@ -30,6 +30,17 @@ ROUTE_WALL_SCENE = XML_DIR / "route_wall_scene.xml"
 ROUTE_RAMP_SCENE = XML_DIR / "route_ramp_scene.xml"
 FULL_ROUTE_SCENE = XML_DIR / "route_scene.xml"
 COLOR_WALLS_SCENE = XML_DIR / "lab8_color_walls_scene.xml"
+# LAB12_SCENE = XML_DIR / "map01_s_curve.xml"
+# LAB12_SCENE = XML_DIR / "map02_funnel.xml"
+# LAB12_SCENE = XML_DIR / "map03_corridor_maze.xml" # diagonal
+LAB12_SCENE = XML_DIR / "map04_islands.xml"
+# LAB12_SCENE = XML_DIR / "map05_dead_ends.xml"
+# LAB12_SCENE = XML_DIR / "map06_narrow_gaps.xml"
+# LAB12_SCENE = XML_DIR / "map07_u_turn.xml"
+# LAB12_SCENE = XML_DIR / "map08_diagonal_slalom.xml"
+# LAB12_SCENE = XML_DIR / "map09_chicane.xml"
+# LAB12_SCENE = XML_DIR / "map10_complex_labyrinth.xml"
+# LAB12_SCENE = XML_DIR / "lab12_scene.xml"
 DEFAULT_CAMERA = "free"
 REALTIME = True
 MAX_STEPS_PER_FRAME = 25
@@ -108,6 +119,10 @@ def load_ramp_model() -> tuple[mujoco.MjModel, mujoco.MjData]:
 
 def load_full_route_model() -> tuple[mujoco.MjModel, mujoco.MjData]:
     return load_model_from_path(FULL_ROUTE_SCENE)
+
+
+def load_lab12_model() -> tuple[mujoco.MjModel, mujoco.MjData]:
+    return load_model_from_path(LAB12_SCENE)
 
 
 def load_default_model() -> tuple[mujoco.MjModel, mujoco.MjData]:
